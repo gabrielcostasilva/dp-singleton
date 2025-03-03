@@ -15,7 +15,7 @@ As long as the [AWS CLI](https://docs.aws.amazon.com/streams/latest/dev/setup-aw
 
 Doing it [in Java](./java) is a little trickier. First, we need a `private` constructor, so the class cannot be directly instantiated. Second, we need to hold a class instance in a `static` field, so it is available at _class level_, shared across all instances. Next, we need a `static` method that retrieves the instance. Finally, the method has to be `synchronized` to ensure the sequence in case of multiple calls at once.
 
-> In practice the Ruby Singleton module does the same, but as it is offered as a ready-to-use solution, we do not its details.
+> In practice the Ruby Singleton module does the same, but as it is offered as a ready-to-use solution, we do not care about its details.
 
 One can run the Java test with `mvn test` 
 
